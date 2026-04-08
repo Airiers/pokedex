@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex</title>
   </head>
-  <script src="main.js" defer></script>
+  <script src="/main.js" defer></script>
   <body>
+    <style>
+      body {
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+      }
+    </style>
     <h1>Pokédex</h1>
+    <h2><a href="/who.html">Play "Who's that Pokémon online"</a></h2>
     <form method="post">
-      <input type="text" name="name" id="name" placeholder="Nom du Pokémon" />
+      <input
+        autocomplete="off"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Nom du Pokémon"
+      />
       <input type="submit" value="Ajouter" />
     </form>
     <p>Trouvés : <span id="found"></span>/150</p>

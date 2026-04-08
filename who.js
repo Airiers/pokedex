@@ -100,7 +100,7 @@ const pokemons = [
   { id: 99, nom_fr: "Krabboss", nom_en: "Kingler" },
   { id: 100, nom_fr: "Voltorbe", nom_en: "Voltorb" },
   { id: 101, nom_fr: "Électrode", nom_en: "Electrode" },
-  { id: 102, nom_fr: "Nœunœuf", nom_en: "Exeggcute" },
+  { id: 102, nom_fr: "Noeunoeuf", nom_en: "Exeggcute" },
   { id: 103, nom_fr: "Noadkoko", nom_en: "Exeggutor" },
   { id: 104, nom_fr: "Osselait", nom_en: "Cubone" },
   { id: 105, nom_fr: "Ossatueur", nom_en: "Marowak" },
@@ -280,12 +280,12 @@ form.addEventListener("submit", (e) => {
       results.innerText = "Gagné !";
       results.style.backgroundColor = "rgba(22, 117, 13, 0.8)";
     } else {
-      results.style.backgroundColor = "rgba(117, 13, 13, 0.8)";
       if (Math.abs(pokemonValide?.id - id) === 1) {
         results.innerText = `Perdu ! C'était pas ${nom}, c'était l'autre !`;
       } else {
         results.innerText = `Perdu ! C'était un ${currentPokemon.nom_fr} !`;
       }
+      results.style.backgroundColor = "rgba(117, 13, 13, 0.8)";
     }
 
     results.style.display = "flex";

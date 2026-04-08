@@ -100,7 +100,7 @@ const pokemons = [
   { id: 99, nom_fr: "Krabboss", nom_en: "Kingler" },
   { id: 100, nom_fr: "Voltorbe", nom_en: "Voltorb" },
   { id: 101, nom_fr: "Électrode", nom_en: "Electrode" },
-  { id: 102, nom_fr: "Nœunœuf", nom_en: "Exeggcute" },
+  { id: 102, nom_fr: "Noeunoeuf", nom_en: "Exeggcute" },
   { id: 103, nom_fr: "Noadkoko", nom_en: "Exeggutor" },
   { id: 104, nom_fr: "Osselait", nom_en: "Cubone" },
   { id: 105, nom_fr: "Ossatueur", nom_en: "Marowak" },
@@ -193,7 +193,7 @@ function addPokemon(pokemon) {
   const li = liElements[pokemon.id];
   li.textContent = "";
   const image = document.createElement("img");
-  image.src = `https://img.pokemondb.net/artwork/avif/${pokemon.nom_en.toLowerCase()}.avif`;
+  image.src = `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${pokemon.id.toString().padStart(3, "0")}.png`;
   image.alt = pokemon.nom_fr;
   image.style.width = "50px";
   image.style.verticalAlign = "middle";
