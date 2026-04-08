@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's that Pokémon ?</title>
+  </head>
+  <script src="who.js" defer></script>
+  <body>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        min-height: 100vh;
+
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+          url("background.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: -25px;
+        color: rgb(255, 218, 56);
+        text-shadow:
+          -3px 0 rgb(56, 86, 255),
+          0 3px rgb(56, 86, 255),
+          3px 0 rgb(56, 86, 255),
+          0 -3px rgb(56, 86, 255);
+      }
+
+      #pokemon {
+        height: 220px; /* légèrement plus haut pour le texte */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #image {
+        height: 100%;
+        object-fit: contain;
+        user-drag: none;
+        -webkit-user-drag: none;
+        pointer-events: none;
+      }
+
+      #name {
+        margin: 10px 0 10px 0;
+        text-align: center;
+        height: 1.5em;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        color: white;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .pokemon {
+        width: 300px;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: brightness(0);
+      }
+      .reveal {
+        filter: brightness(1);
+      }
+
+      button,
+      input {
+        padding: 10px;
+      }
+
+      input {
+        width: 200px;
+      }
+
+      main,
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      main {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      main > * {
+        margin: 10px;
+      }
+
+      #results {
+        border-radius: 10px;
+        padding: 15px 20px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+    </style>
+    <main>
+      <h1>Who's that Pokémon ?</h1>
+      <div class="content">
+        <div id="pokemon" class="pokemon">
+          <h2 id="name">?</h2>
+          <img src="" id="image" />
+        </div>
+        <form method="post">
+          <input type="text" name="input" id="input" />
+          <input type="submit" hidden />
+        </form>
+        <div id="results"></div>
+      </div>
+      <div class="buttons">
+        <button type="button" id="complet">Image cachée</button>
+        <button type="button" id="gb">Gameboy 1997</button>
+        <button type="button" id="try">Du premier coup</button>
+        <button type="button" id="new">Suivant</button>
+      </div>
+    </main>
+  </body>
+</html>
